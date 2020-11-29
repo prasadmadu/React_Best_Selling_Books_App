@@ -21,5 +21,14 @@ npm start
 https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=<key>
 ```
 
+## Screenshots
+<div>
+  <img src="./public/1.png">
+</div>
+<br/>
+<div>
+  <img src="./public/2.png">
+</div>
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
