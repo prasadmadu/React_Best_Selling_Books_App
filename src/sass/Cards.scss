@@ -1,0 +1,171 @@
+.cardbody{
+  position: relative;
+  width: auto;
+  margin-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  border-radius: 5px;
+  background-color: hsl(0, 3%, 70%);
+  box-shadow: inset -4px -4px 7px hsl(0, 3%, 80%), inset 5px 5px 9px hsl(0, 3%, 60%);
+  &:hover{
+    background-color:  hsl(0, 3%, 70%);
+    box-shadow: -4px -4px 7px hsl(0, 3%, 90%), 5px 5px 9px hsl(0, 3%, 50%);
+    text-decoration: wavy;
+    .buybutton{
+      visibility: visible;
+    }
+    // &::after{
+    //   content: '';
+    //   z-index: 100;
+    //   position: absolute;
+    //   left: 5%;
+    //   top: 0;
+    //   margin-bottom: 30px;
+    //   width: 100%;
+    //   height: 320px;
+    //   border-radius: 5px;
+    //   background-color:  #6C63FF;
+    //   opacity: 0.2;
+    // }
+  }
+  
+  .cardimg{
+    position: relative;
+    height: 300px;
+  }
+  .cardmain{
+    width: 198px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .cardcont{
+    padding-top: 10px;
+    height: 80px;
+    position: relative;
+  }
+
+}
+.buybutton{
+  z-index: 200;
+  visibility: hidden;
+  cursor: pointer;
+  body{
+    max-width: 0;
+    padding: 0;
+    background: #262626;
+  }
+  div{
+    position: absolute;
+    top: 0%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transform-origin: center center;
+  }
+  span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    background: rgba(255, 255, 255, .05);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    border-right: 30px;
+    border-radius: 30px;
+    border-radius: 30px 0 0 30px;
+    text-transform: uppercase;
+    color: #fff;
+    transition: 1s;
+  }
+  span.front{
+    transform: rotateX(0deg) translateZ(20px);
+  }
+  div:hover span.front{
+    transform: rotateX(180deg) translateZ(20px);
+  }
+  span.back{
+    transform: rotateX(-180deg) translateZ(20px);
+  }
+  div:hover span.back{
+    transform: rotateX(0deg) translateZ(20px);
+  }
+  span.center{
+    background:  #7129bd;
+  }
+  span.center::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:  #a38b03;
+    border-radius: 30px 0 0 30px;
+    transform: translateZ(-1px);
+  }
+  div:hover span.center{
+    transform: rotateX(-180deg);
+  }
+  
+}
+
+.modlcont{
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  .modelmain{
+    height: 300px;
+    width: 198px;
+    padding: 50px;
+    margin: 50px;
+    transform: rotate(-10deg);
+    &:hover{
+      transform: perspective(2000px) rotate(-20deg);
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      right: -5px;
+      bottom: -5px;
+      width: 100%;
+      height: 5px;
+      background: #0463a1;
+      transform-origin: bottom;
+      transform: skewX(45deg);
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -5px;
+      width: 5px;
+      height: 100%;
+      background: rgb(1, 71, 99);
+      transform-origin: left;
+      transform: skewY(45deg);
+    }
+  }
+  .moddes{
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+  }
+  background{
+    background: #a38b03;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+  }
+}

@@ -1,0 +1,205 @@
+.cardbody {
+  position: relative;
+  width: auto;
+  margin-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  border-radius: 5px;
+  background-color: #b5b0b0;
+  -webkit-box-shadow: inset -4px -4px 7px #cecaca, inset 5px 5px 9px #9c9696;
+          box-shadow: inset -4px -4px 7px #cecaca, inset 5px 5px 9px #9c9696;
+}
+
+.cardbody:hover {
+  background-color: #b5b0b0;
+  -webkit-box-shadow: -4px -4px 7px #e6e5e5, 5px 5px 9px #837c7c;
+          box-shadow: -4px -4px 7px #e6e5e5, 5px 5px 9px #837c7c;
+  -webkit-text-decoration: wavy;
+          text-decoration: wavy;
+}
+
+.cardbody:hover .buybutton {
+  visibility: visible;
+}
+
+.cardbody .cardimg {
+  position: relative;
+  height: 300px;
+}
+
+.cardbody .cardmain {
+  width: 198px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.cardbody .cardcont {
+  padding-top: 10px;
+  height: 80px;
+  position: relative;
+}
+
+.buybutton {
+  z-index: 200;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.buybutton body {
+  max-width: 0;
+  padding: 0;
+  background: #262626;
+}
+
+.buybutton div {
+  position: absolute;
+  top: 0%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.buybutton span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-right: 30px;
+  border-radius: 30px;
+  border-radius: 30px 0 0 30px;
+  text-transform: uppercase;
+  color: #fff;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.buybutton span.front {
+  -webkit-transform: rotateX(0deg) translateZ(20px);
+          transform: rotateX(0deg) translateZ(20px);
+}
+
+.buybutton div:hover span.front {
+  -webkit-transform: rotateX(180deg) translateZ(20px);
+          transform: rotateX(180deg) translateZ(20px);
+}
+
+.buybutton span.back {
+  -webkit-transform: rotateX(-180deg) translateZ(20px);
+          transform: rotateX(-180deg) translateZ(20px);
+}
+
+.buybutton div:hover span.back {
+  -webkit-transform: rotateX(0deg) translateZ(20px);
+          transform: rotateX(0deg) translateZ(20px);
+}
+
+.buybutton span.center {
+  background: #7129bd;
+}
+
+.buybutton span.center::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #a38b03;
+  border-radius: 30px 0 0 30px;
+  -webkit-transform: translateZ(-1px);
+          transform: translateZ(-1px);
+}
+
+.buybutton div:hover span.center {
+  -webkit-transform: rotateX(-180deg);
+          transform: rotateX(-180deg);
+}
+
+.modlcont {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modlcont .modelmain {
+  height: 300px;
+  width: 198px;
+  padding: 50px;
+  margin: 50px;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+
+.modlcont .modelmain:hover {
+  -webkit-transform: perspective(2000px) rotate(-20deg);
+          transform: perspective(2000px) rotate(-20deg);
+}
+
+.modlcont .modelmain::before {
+  content: '';
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  width: 100%;
+  height: 5px;
+  background: #0463a1;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform: skewX(45deg);
+          transform: skewX(45deg);
+}
+
+.modlcont .modelmain::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 5px;
+  height: 100%;
+  background: #014763;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: skewY(45deg);
+          transform: skewY(45deg);
+}
+
+.modlcont .moddes {
+  text-align: left;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 40px;
+}
+
+.modlcont background {
+  background: #a38b03;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 20px;
+}
+/*# sourceMappingURL=Cards.css.map */
